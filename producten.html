@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedBoost Shop | Producten</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white antialiased">
+    <!-- Background glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+        <div class="absolute -top-24 left-1/2 h-72 w-[44rem] -translate-x-1/2 rounded-full bg-rose-600/20 blur-3xl">
+        </div>
+        <div class="absolute top-40 right-[-10rem] h-72 w-[36rem] rounded-full bg-amber-400/15 blur-3xl"></div>
+    </div>
+
+    <!-- NAVBAR (zelfde stijl) -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+            <!-- Brand -->
+            <a href="index.html" class="group flex items-center gap-3">
+                <div class="grid h-10 w-10 place-items-center rounded-2xl bg-white/10 ring-1 ring-white/15 transition group-hover:bg-white/15"
+                    aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M13 2L3 14h7l-1 8 12-14h-7l-1-6z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="leading-tight">
+                    <p class="text-base font-semibold tracking-tight">RedBoost Shop</p>
+                    <p class="text-xs text-white/60">Officiële Red Bull webshop</p>
+                </div>
+            </a>
+
+            <!-- Links (desktop) -->
+            <div class="hidden items-center gap-6 md:flex">
+                <a class="text-sm text-white/80 hover:text-white" href="index.html">Home</a>
+                <a class="text-sm text-white/80 hover:text-white" href="over-ons.html">Over ons</a>
+                <a class="text-sm text-white" href="producten.html" aria-current="page">Producten</a>
+                <a class="text-sm text-white/80 hover:text-white" href="contact.html">Contact</a>
+                <a class="text-sm text-white/80 hover:text-white" href="medewerkers.html">Medewerkers</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-2">
+                <!-- Cart icon -->
+                <button type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15 transition hover:bg-white/15"
+                    aria-label="Winkelwagen" title="Winkelwagen">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+                        <path d="M17 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+                    </svg>
+                </button>
+
+                <!-- Mobile menu button (visueel) -->
+                <button type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15 transition hover:bg-white/15 md:hidden"
+                    aria-label="Menu" title="Menu">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="mx-auto w-full max-w-6xl px-4">
+        <!-- Page header -->
+        <section class="py-8 md:py-12">
+            <div
+                class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40 p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] md:p-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-rose-600/15 via-white/5 to-amber-400/10"></div>
+                <div class="relative">
+                    <p class="text-sm font-medium text-white/70">Producten</p>
+                    <h1 class="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+                        Kies jouw Red Bull: classic, sugarfree en meer.
+                    </h1>
+                    <p class="mt-4 max-w-3xl text-white/75 md:text-lg">
+                        Van de originele smaak tot verfrissende varianten: ontdek onze selectie blikken en bundels.
+                        Ideaal voor onderweg, op het werk, tijdens het sporten of voor lange studiedagen.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product grid (6 items) -->
+        <section class="pb-8 md:pb-12">
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Product 1 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <!-- Voeg hier jouw afbeelding toe -->
+                        <!-- <img src="img/product-1.jpg" alt="Red Bull Original" class="absolute inset-0 h-full w-full object-cover" /> -->
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Original</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            De klassieke energydrank met de herkenbare smaak. Ideaal voor focus en extra energie, op elk
+                            moment van de dag.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,49 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Sugarfree</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            Voor wie de energie wil zonder suiker. Licht en fris, met een smaak die perfect past bij een
+                            druk schema.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,49 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Zero</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            Volle smaak zonder suiker. Een strakke, moderne keuze voor wie graag energiek blijft met een
+                            clean profiel.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,49 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Apricot Edition</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            Fruitig en zacht met een frisse afdronk. Perfect als je houdt van een energydrank met een
+                            subtiele twist.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,79 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <!-- Product 5 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Tropical Edition</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            Tropische vibes met een frisse, zonnige smaak. Ideaal voor warme dagen of wanneer je zin
+                            hebt in iets anders.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,79 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="rounded-3xl border border-white/10 bg-slate-900/40 overflow-hidden">
+                    <div class="relative min-h-[12rem] bg-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-rose-600/10">
+                        </div>
+                        <div class="relative grid min-h-[12rem] place-items-center p-6">
+                            <div class="text-center">
+                                <p class="text-sm font-semibold text-white/80">Afbeelding</p>
+                                <p class="mt-1 text-xs text-white/60">Plaats hier jouw productfoto</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 flex flex-col">
+                        <h2 class="text-lg font-bold">Red Bull Watermelon Edition</h2>
+                        <p class="mt-2 text-sm text-white/75">
+                            Licht, fris en fruitig met watermeloen. Een verfrissende keuze die perfect past bij een
+                            energieke dag.
+                        </p>
+
+                        <div class="mt-4 flex items-center justify-between">
+                            <p class="text-lg font-semibold text-white">
+                                €2,79 <span class="text-sm text-white/60">/ blik</span>
+                            </p>
+
+                            <button type="button"
+                                class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15"
+                                title="Toevoegen aan winkelwagen" aria-label="Toevoegen aan winkelwagen">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                                    <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linejoin="round" />
+                                    <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8"
+                                        stroke-linecap="round" />
+                                    <path d="M9 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                    <path d="M17 20a1 1 0 1 0 0-2" fill="currentColor" />
+                                </svg>
+                                In winkelwagen
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </section>
+
+        <!-- BLOK NET BOVEN FOOTER (zelfde als vorige pagina) -->
+        <section class="py-8 md:py-12">
+            <div class="grid gap-6 lg:grid-cols-3">
+                <!-- Mini nav -->
+                <div class="rounded-3xl border border-white/10 bg-slate-900/40 p-6">
+                    <h3 class="text-base font-bold">Snelmenu</h3>
+                    <p class="mt-2 text-sm text-white/70">Snelle links naar de belangrijkste pagina’s.</p>
+
+                    <div class="mt-4 grid gap-2 text-sm">
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="index.html">Home</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="over-ons.html">Over ons</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white hover:bg-white/10" href="producten.html"
+                            aria-current="page">Producten</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Contact info -->
+                <div class="rounded-3xl border border-white/10 bg-slate-900/40 p-6">
+                    <h3 class="text-base font-bold">Contactgegevens</h3>
+                    <p class="mt-2 text-sm text-white/70">Vragen over bundels of grote bestellingen? Neem contact op.
+                    </p>
+
+                    <div class="mt-5 space-y-4 text-sm">
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">Adres</p>
+                            <p class="mt-1 font-semibold">Booststraat 12, 1000 Brussel</p>
+                        </div>
+
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">Telefoon</p>
+                            <p class="mt-1 font-semibold">+32 470 12 34 56</p>
+                        </div>
+
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">E-mail</p>
+                            <p class="mt-1 font-semibold">info@redboost-shop.be</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Locatie -->
+                <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-slate-900/40">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-amber-400/10"></div>
+                    <div class="relative p-6">
+                        <h3 class="text-base font-bold">Onze locatie</h3>
+                        <p class="mt-2 text-sm text-white/70">
+                            Bezoek onze winkel of haal je bestelling af. Vlot bereikbaar met openbaar vervoer en parking
+                            in de buurt.
+                        </p>
+
+                        <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-white/10">
+                            <div class="grid h-48 place-items-center bg-white/5">
+                                <div class="text-center">
+                                    <p class="text-sm font-semibold text-white/80">Booststraat 12</p>
+                                    <p class="mt-1 text-xs text-white/60">1000 Brussel</p>
+                                </div>
+                            </div>
+                            <!-- Hier kan je later een Google Maps iframe plaatsen -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-slate-950/60">
+        <div class="mx-auto max-w-6xl px-4 py-6">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-sm text-white/70">© RedBoost Shop — alle rechten voorbehouden.</p>
+                <p class="text-xs text-white/50">Gemaakt met Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
