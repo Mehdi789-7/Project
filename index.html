@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedBoost Shop | Home</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: "#0B1220",
+                        midnight: "#0A1020",
+                        accent: "#E11D48",
+                        accent2: "#F59E0B",
+                        soft: "#0F1A33",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="min-h-screen bg-ink text-white antialiased">
+    <!-- Top gradient background accent -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+        <div class="absolute -top-24 left-1/2 h-72 w-[44rem] -translate-x-1/2 rounded-full bg-accent/20 blur-3xl"></div>
+        <div class="absolute top-40 right-[-10rem] h-72 w-[36rem] rounded-full bg-amber-400/15 blur-3xl"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-midnight/70 backdrop-blur">
+        <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+            <!-- Brand -->
+            <a href="#" class="group flex items-center gap-3">
+                <div class="grid h-10 w-10 place-items-center rounded-2xl bg-white/10 ring-1 ring-white/15 transition group-hover:bg-white/15"
+                    aria-hidden="true">
+                    <!-- simple "bolt" icon -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M13 2L3 14h7l-1 8 12-14h-7l-1-6z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="leading-tight">
+                    <p class="text-base font-semibold tracking-tight">RedBoost Shop</p>
+                </div>
+            </a>
+
+            <!-- Links (desktop) -->
+            <div class="hidden items-center gap-6 md:flex">
+                <a class="text-sm text-white/80 hover:text-white" href="#">Home</a>
+                <a class="text-sm text-white/80 hover:text-white" href="#">Over ons</a>
+                <a class="text-sm text-white/80 hover:text-white" href="#">Producten</a>
+                <a class="text-sm text-white/80 hover:text-white" href="#">Contact</a>
+                <a class="text-sm text-white/80 hover:text-white" href="#">Medewerkers</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-2">
+                <!-- Cart icon button -->
+                <button type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15 transition hover:bg-white/15"
+                    aria-label="Winkelwagen" title="Winkelwagen">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M6 6h15l-2 9H8L6 6Z" stroke="currentColor" stroke-width="1.8"
+                            stroke-linejoin="round" />
+                        <path d="M6 6 5 3H2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        <path d="M9 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+                        <path d="M17 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="currentColor" />
+                    </svg>
+                </button>
+
+                <!-- Mobile menu button (no functionality; juste visuel) -->
+                <button type="button"
+                    class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15 transition hover:bg-white/15 md:hidden"
+                    aria-label="Menu openen" title="Menu">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="opacity-90">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mx-auto w-full max-w-6xl px-4">
+        <!-- HERO / CAROUSEL -->
+        <section class="py-6 md:py-10">
+            <div
+                class="relative overflow-hidden rounded-3xl border border-white/10 bg-soft shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
+                <!-- Slides (placeholders sans images) -->
+                <div id="carousel" class="relative h-[22rem] md:h-[28rem]">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide absolute inset-0 flex h-full w-full flex-col justify-end p-6 md:p-10"
+                        data-slide="0">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent/25 via-white/5 to-amber-400/10">
+                        </div>
+                        <div class="absolute inset-0 opacity-40" style="
+                  background-image: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 35%),
+                    radial-gradient(circle at 80% 30%, rgba(225, 29, 72, 0.18), transparent 35%),
+                    radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.12), transparent 35%);
+                "></div>
+
+                        <div class="relative max-w-2xl">
+                            <p class="text-sm font-medium text-white/70">Nieuwe collectie • Limited</p>
+                            <h1 class="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+                                Energie die bij jouw tempo past.
+                            </h1>
+                            <p class="mt-3 text-white/75 md:text-lg">
+                                Ontdek onze fictieve smaken, bundels en deals. Snel, strak en altijd “ready to go”.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <a href="#producten"
+                                    class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white/90">
+                                    Bekijk producten
+                                </a>
+                                <a href="#over-ons"
+                                    class="inline-flex items-center justify-center rounded-2xl bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15">
+                                    Meer over ons
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide absolute inset-0 hidden h-full w-full flex-col justify-end p-6 md:p-10"
+                        data-slide="1">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-400/20 via-white/5 to-accent/10">
+                        </div>
+                        <div class="relative max-w-2xl">
+                            <p class="text-sm font-medium text-white/70">Bundels & voordeel</p>
+                            <h2 class="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+                                Slimme packs voor elke dag.
+                            </h2>
+                            <p class="mt-3 text-white/75 md:text-lg">
+                                Kies een mix, stel je eigen doos samen en bespaar op je favoriete “boost”.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <a href="#producten"
+                                    class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white/90">
+                                    Packs ontdekken
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide absolute inset-0 hidden h-full w-full flex-col justify-end p-6 md:p-10"
+                        data-slide="2">
+                        <div class="absolute inset-0 bg-gradient-to-br from-white/10 via-accent/10 to-white/5"></div>
+                        <div class="relative max-w-2xl">
+                            <p class="text-sm font-medium text-white/70">Snelle levering (fictief)</p>
+                            <h2 class="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
+                                Bestel in 2 minuten, klaar voor actie.
+                            </h2>
+                            <p class="mt-3 text-white/75 md:text-lg">
+                                Een minimalistische shop-ervaring met een moderne look — perfect voor je schoolproject.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-3">
+                                <a href="#contact"
+                                    class="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-ink transition hover:bg-white/90">
+                                    Contact opnemen
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="relative flex items-center justify-between gap-3 border-t border-white/10 p-4 md:p-5">
+                    <div class="flex items-center gap-2">
+                        <button id="prevBtn"
+                            class="inline-flex items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold ring-1 ring-white/15 transition hover:bg-white/15"
+                            type="button">
+                            Vorige
+                        </button>
+                        <button id="nextBtn"
+                            class="inline-flex items-center justify-center rounded-xl bg-white/10 px-3 py-2 text-sm font-semibold ring-1 ring-white/15 transition hover:bg-white/15"
+                            type="button">
+                            Volgende
+                        </button>
+                    </div>
+
+                    <!-- Dots -->
+                    <div class="flex items-center gap-2">
+                        <button class="dot h-2.5 w-2.5 rounded-full bg-white" aria-label="Slide 1"></button>
+                        <button class="dot h-2.5 w-2.5 rounded-full bg-white/30" aria-label="Slide 2"></button>
+                        <button class="dot h-2.5 w-2.5 rounded-full bg-white/30" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT HIGHLIGHT -->
+        <section id="producten" class="py-8 md:py-12">
+            <div class="grid gap-6 md:grid-cols-2">
+                <!-- Text card -->
+                <div
+                    class="rounded-3xl border border-white/10 bg-soft p-6 shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)] md:p-8">
+                    <div class="flex items-start justify-between gap-4">
+                        <div>
+                            <h2 class="text-xl font-bold tracking-tight md:text-2xl">Producten</h2>
+                            <p class="mt-2 text-white/75">
+                                Onze fictieve selectie is gemaakt voor wie focus wil, tempo zoekt en nét dat beetje
+                                extra
+                                energie nodig heeft.
+                            </p>
+                        </div>
+                        <span
+                            class="shrink-0 rounded-2xl bg-white/10 px-3 py-1 text-xs font-semibold text-white/70 ring-1 ring-white/10">
+                            Nieuw
+                        </span>
+                    </div>
+
+                    <ul class="mt-5 space-y-3 text-sm text-white/80">
+                        <li class="flex gap-2">
+                            <span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+                            Klassieke “boost” (fictief) met frisse afdronk.
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+                            Suikervrije optie (fictief) voor een clean gevoel.
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-accent"></span>
+                            Bundels en mix-packs (fictief) — ideaal voor events.
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 flex items-center justify-end">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15">
+                            Meer info
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-80">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image placeholder card -->
+                <div
+                    class="relative overflow-hidden rounded-3xl border border-white/10 bg-soft shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-accent/10"></div>
+                    <div class="relative grid h-full min-h-[16rem] place-items-center p-6">
+                        <div class="text-center">
+                            <p class="text-sm font-semibold text-white/80">Afbeelding placeholder</p>
+                            <p class="mt-1 text-xs text-white/60">
+                                Hier plaats jij later jouw productfoto(’s).
+                            </p>
+                            <div class="mt-6 mx-auto h-24 w-24 rounded-3xl bg-white/10 ring-1 ring-white/15"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OVER ONS -->
+        <section id="over-ons" class="py-8 md:py-12">
+            <div class="grid gap-6 md:grid-cols-2">
+                <!-- Image placeholder -->
+                <div
+                    class="relative overflow-hidden rounded-3xl border border-white/10 bg-soft shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-amber-400/10">
+                    </div>
+                    <div class="relative grid h-full min-h-[16rem] place-items-center p-6">
+                        <div class="text-center">
+                            <p class="text-sm font-semibold text-white/80">Afbeelding placeholder</p>
+                            <p class="mt-1 text-xs text-white/60">
+                                Hier kan een teamfoto of sfeerbeeld komen.
+                            </p>
+                            <div class="mt-6 mx-auto h-24 w-24 rounded-3xl bg-white/10 ring-1 ring-white/15"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div
+                    class="rounded-3xl border border-white/10 bg-soft p-6 shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)] md:p-8">
+                    <h2 class="text-xl font-bold tracking-tight md:text-2xl">Over ons</h2>
+                    <p class="mt-3 text-white/75">
+                        RedBoost Shop is een fictief team van enthousiastelingen die een strakke online ervaring
+                        bouwen: snel navigeren, duidelijke secties en een moderne stijl.
+                    </p>
+                    <p class="mt-3 text-white/75">
+                        Dit project focust op responsieve layouts, nette UI-componenten en een helder design
+                        dat professioneel aanvoelt.
+                    </p>
+
+                    <div class="mt-6 flex items-center justify-end">
+                        <a href="#"
+                            class="inline-flex items-center gap-2 rounded-2xl bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/15">
+                            Meer lezen
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="opacity-80">
+                                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT STRIP (3 kolommen) -->
+        <section id="contact" class="py-8 md:py-12">
+            <div class="grid gap-6 lg:grid-cols-3">
+                <!-- Mini nav -->
+                <div class="rounded-3xl border border-white/10 bg-soft p-6 shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)]">
+                    <h3 class="text-base font-bold">Snelmenu</h3>
+                    <p class="mt-2 text-sm text-white/70">
+                        Extra links (zonder winkelwagen). Handig als “footer-nav”.
+                    </p>
+
+                    <div class="mt-4 grid gap-2 text-sm">
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="#over-ons">Over ons</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="#producten">Producten</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="#contact">Contact</a>
+                        <a class="rounded-xl bg-white/5 px-4 py-2 text-white/80 hover:bg-white/10 hover:text-white"
+                            href="#medewerkers">Medewerkers</a>
+                    </div>
+                </div>
+
+                <!-- Contact info -->
+                <div class="rounded-3xl border border-white/10 bg-soft p-6 shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)]">
+                    <h3 class="text-base font-bold">Contactgegevens</h3>
+                    <p class="mt-2 text-sm text-white/70">
+                        Fictieve info die jij later kan aanpassen.
+                    </p>
+
+                    <div class="mt-5 space-y-4 text-sm">
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">Adres</p>
+                            <p class="mt-1 font-semibold">Stormstraat 2, 1000 Brussel</p>
+                        </div>
+
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">Telefoon</p>
+                            <p class="mt-1 font-semibold">+32 470 12 34 56</p>
+                        </div>
+
+                        <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                            <p class="text-xs text-white/60">E-mail</p>
+                            <p class="mt-1 font-semibold">info@redboost-shop.be</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map placeholder -->
+                <div
+                    class="relative overflow-hidden rounded-3xl border border-white/10 bg-soft shadow-[0_18px_50px_-25px_rgba(0,0,0,0.7)]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-amber-400/10"></div>
+
+                    <div class="relative p-6">
+                        <h3 class="text-base font-bold">Locatie</h3>
+                        <p class="mt-2 text-sm text-white/70">
+                            Plaats hier later een embed of kaartcomponent.
+                        </p>
+
+                        <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-white/10">
+                            <div class="grid h-48 place-items-center bg-white/5">
+                                <iframe class="h-48 w-full"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40312.30081916275!2d4.327233610558473!3d50.840076496754946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c380e764e2db%3A0xb9f96eef954121f3!2sKU%20Leuven%20Hermes!5e0!3m2!1sfr!2sbe!4v1768927890757!5m2!1sfr!2sbe"
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <div class="text-center">
+                                    <p class="text-sm font-semibold text-white/80">Kaart placeholder</p>
+                                    <p class="mt-1 text-xs text-white/60">Vervang door een Google Maps iframe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-midnight/60">
+        <div class="mx-auto max-w-6xl px-4 py-6">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-sm text-white/70">
+                    © <span id="year"></span> RedBoost Shop — alle rechten voorbehouden.
+                </p>
+                <p class="text-xs text-white/50">
+                    Schoolproject • Fictieve webshop • Gemaakt met Tailwind CSS
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Year
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Carousel
+        const slides = Array.from(document.querySelectorAll(".carousel-slide"));
+        const dots = Array.from(document.querySelectorAll(".dot"));
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let index = 0;
+
+        function render() {
+            slides.forEach((s, i) => {
+                s.classList.toggle("hidden", i !== index);
+            });
+            dots.forEach((d, i) => {
+                d.classList.toggle("bg-white", i === index);
+                d.classList.toggle("bg-white/30", i !== index);
+            });
+        }
+
+        function next() {
+            index = (index + 1) % slides.length;
+            render();
+        }
+
+        function prev() {
+            index = (index - 1 + slides.length) % slides.length;
+            render();
+        }
+
+        nextBtn.addEventListener("click", next);
+        prevBtn.addEventListener("click", prev);
+
+        dots.forEach((d, i) => {
+            d.addEventListener("click", () => {
+                index = i;
+                render();
+            });
+        });
+
+        // Auto-rotation (tu peux enlever si tu veux)
+        setInterval(next, 6000);
+
+        render();
+    </script>
+</body>
+
+</html>
